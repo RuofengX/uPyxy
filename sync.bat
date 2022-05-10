@@ -1,5 +1,6 @@
-ampy -p COM8 reset
-ampy -p COM8 ls
-ampy -p COM8 rmdir /lib
-ampy -p COM8 put ./main/lib /lib
-ampy -p COM8 ls
+@REM ampy -p COM8 reset
+@REM ampy -p COM8 ls
+@REM ampy -p COM8 rmdir /lib
+@REM ampy -p COM8 put ./main/lib /lib
+@REM ampy -p COM8 ls
+echo "run these code directely in the command line"
