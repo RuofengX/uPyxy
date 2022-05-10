@@ -2,7 +2,6 @@ import gc
 import uasyncio
 import sys
 import os
-from ssl import SSLError
 
 from safe_block import Key
 from aisle import LogMixin, SyncLogger
@@ -178,9 +177,9 @@ class StreamBase(LogMixin):
             # 连接被重置
             pass
 
-        except SSLError:
-            # ssl连接错误，可能是上述错误导致的
-            pass
+        # except SSLError:
+        #     # Micropython中没有这个异常，取而代之的是OSError
+        #     pass
 
         except Exception as err:
             self.logger.warning(f"在关闭连接时发生意外错误 > {type(err)} {err}")
